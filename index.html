@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body>
+    <div class="quiz">
+        <div class="container quiz__btn">
+            <button class="btn__openquiz">Open Quiz</button>
+        </div>
+        <div class="container quiz__rules">
+            <div class="quiz__rules__title__container">
+                <h2 class="quiz__rules__title">Quiz rules</h2>
+            </div>
+            <div class="quiz__rules__list">
+                <span class="quiz__rules__text">1. The quiz length is 15 seconds</span><br>
+                <span class="quiz__rules__text">2. You got 15 seconds to answer each question</span><br>
+                <span class="quiz__rules__text">3. The right answers are coloured green</span><br>
+                <span class="quiz__rules__text">4. The wrong answers are coloured red</span><br>
+            </div>
+            <div class="quiz__rules__btn">
+                <button class="btn__continue">Continue</button>
+            </div>  
+        </div>
+        <div class="container questions">
+           <div class="questions__time">
+               <span class="que__time__left">Time Left</span>
+               <span class="que__time__numb">15</span>
+           </div> 
+           <div class="questions__list">
+               <div class="que__item">1. Que es HTML?</div>
+               <div class="option__list">
+                   <div class="option"> Hyper text markup language</div>
+                   <div class="option"> Hyper tool markup language</div>
+                   <div class="option"> Hyper name markup lang</div>
+                   <div class="option"> Hyper name lang</div>
+               </div>
+           </div>
+            <footer class="questions__footer">
+               <div class="que__number">
+                   <!--span>2<p> of </p>5</span-->
+               </div>
+               <button class="btn__next">Next</button>
+            </footer>
+        </div>
+        <div class="container result__quiz">
+           <div class="completed">
+               <i class="uil uil-medal medal__icon"></i>
+               <h3 class="completed__text">You've completed the Quiz</h3>
+               <!--span>and you, got <p>2</p>out of<p>5</p></span-->
+           </div>    
+           <button class="result__quiz_quit">Quit Quiz</button>
+        </div>
+    </div>
+    <script src="code.js" type="module"></script> 
+</body>
+</html>

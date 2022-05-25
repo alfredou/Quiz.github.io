@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+body{
+    background-color: #00b33c;
+}
+/*boton de comenzar el quiz*/
+.quiz{
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+}
+.container{
+  position: absolute;
+   top: 50%; 
+  left: 50%;
+  /*lo usamos para negar la posicion de modo que este centrado horizontal y verticalmente*/
+  transform: translate(-50%, -50%);  
+}
+.btn__openquiz{
+    width: 200px; 
+    height: 85px;
+    border-radius: 45px; 
+    outline: none; 
+    border: none;  
+    color: #00b11c; 
+    font-size: 25px; 
+    cursor: pointer; 
+    z-index: 10;
+    opacity: 1;  
+}
+.btn__openquiz:hover{
+    box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid #00b33c; 
+}
+/*contenedor de reglas*/
+.quiz__rules{
+    background: #fff; 
+    border-radius: 5px;
+    width: 450px;
+    height: 300px;  
+    display: none;  
+}
+.quiz__rules-active{
+    display: block; 
+}
+.quiz__rules__title{
+    font-size: 35px; 
+    margin-left: 25px; 
+    margin-bottom: 30px; 
+}
+.quiz__rules__title__container{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+}
+.quiz__rules__list{
+   font-size: 18px; 
+   margin-left: 25px; 
+   font-weight: 600; 
+}
+.quiz__rules__btn{
+    display: flex; 
+    justify-content: flex-end; 
+    margin: 0 25px 10px 0;  
+    margin-top: 20px;
+}
+.btn__continue{
+    width: 90px; 
+    height: 40px;
+    outline: none; 
+    border: none; 
+    font-size: 16px;  
+    border-radius: 5px; 
+    cursor: pointer; 
+    color: #fff; 
+    background-color: #00b33c;
+}
+.btn__continue:hover{
+    border: 1px solid #00b33c; 
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5); 
+}
+/*Questions container*/
+.questions{
+    width: 540px;  
+    height: 410px; 
+    background-color: #fff; 
+    border-radius: 5px; 
+    display: none; 
+}
+.questions-active{
+    display: block; 
+}
+.questions__time{
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    gap: 5px;  
+    height: 35px;
+}
+.que__time__left{
+    font-weight: 600; 
+}
+.que__time__numb{
+    background-color: #404040;
+    font-weight: 600; 
+    color: #fff; 
+    padding-left: 2px; 
+    width: 25px;  
+    border-radius: 2px; 
+}
+.questions__list{
+    margin: 20px 0px 0px 20px;  
+}
+.que__item{
+    height: 70px; 
+    font-weight: 600; 
+    font-size: 20px; 
+}
+.option__list{
+    margin-top: 20px; 
+}
+.option{
+    border: 1px solid #404040;
+    width: 500px;  
+    height: 40px; 
+    margin-bottom: 10px; 
+    border-radius: 30px;
+    text-align: center; 
+    cursor: pointer; 
+}
+.option-correct{
+  background-color: #00d99d;
+  border: 1px solid #00b33c; 
+  color: #fff; 
+}
+.option-incorrect{
+    background-color: #ff4d4d;
+    border: 1px solid #ff4d4d;
+    color: #fff; 
+}
+.option.disabled{
+    pointer-events: none;
+    user-select: none; 
+}
+.option:nth-child(4){
+    margin-bottom: initial; 
+}
+.questions__footer{
+    display: flex; 
+    justify-content: space-between;   
+    margin: 28px 15px 0px 15px; 
+}
+.que__number{
+    font-weight: 600;   
+}
+.que__number p{
+    display: inline-block; 
+}
+.btn__next,
+.result__quiz_quit{
+    width: 100px; 
+    height: 40px;
+    cursor: pointer; 
+    color: #fff;
+    background-color: #00b33c; 
+    border: none; 
+    outline: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+}
+.result__quiz_quit:hover,
+.btn__next:hover{
+    border: 1px solid #00b33c; 
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+/*resultado container*/
+.result__quiz{
+    background-color: #fff; 
+    width: 300px; 
+    height: 300px;
+    border-radius: 5px; 
+    display: none; 
+}
+.result__quiz-active{
+    display: block; 
+}
+.medal__icon{
+   font-size: 150px;
+   display: flex; 
+   justify-content: center;  
+}
+.completed{
+    text-align: center; 
+}
+.completed span{
+    display: flex; 
+    font-weight: 600;
+    justify-content: center;
+    align-items: center; 
+    gap: 5px;  
+}
+.completed__text{
+    text-align: center; 
+}
+.result__quiz_quit{
+    margin: 27px 0px 0px 100px;
+}
